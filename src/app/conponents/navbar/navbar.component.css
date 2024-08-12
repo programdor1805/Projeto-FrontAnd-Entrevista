@@ -1,0 +1,21 @@
+.navbar-brand {
+    font-weight: bold;
+    color: #007bff; /* Cor do nome da aplicação */
+  }
+  
+  .navbar-nav .nav-link {
+    color: #343a40; /* Cor dos links */
+  }
+  
+  .navbar-nav .nav-link:hover {
+    color: #007bff; /* Cor dos links ao passar o mouse */
+  }
+  
+  .dropdown-menu {
+    background-color: #ffffff; /* Cor de fundo do dropdown */
+  }
+  
+  .dropdown-item:hover {
+    background-color: #e9ecef; /* Cor de fundo ao passar o mouse */
+  }
+  

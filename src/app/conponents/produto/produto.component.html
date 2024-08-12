@@ -1,0 +1,74 @@
+
+<div *ngIf="formInvalid" [ngClass]="{'alert-success': alertType === 'success', 'alert-danger': alertType === 'danger'}" class="alert alert-dismissible fade show p-3" role="alert">
+  {{ alertMessage }}
+  <button type="button" class="btn-close" (click)="closeAlert()" aria-label="Close"></button>
+</div>
+
+
+ 
+ <div class="container">
+    <h2>{{ isEditMode ? 'Editando Produto' : 'Novo Produto' }}</h2>
+  </div>
+
+
+
+<div class="form-container ">
+  <form #produtoForm="ngForm" (ngSubmit)="onCriarProduto(produtoForm)">
+    <div class="mb-3">        
+      <label for="codigo">Codigo: </label>
+      <input type="text" class="form-control" id="codigo" required [(ngModel)]="produto.codigo" name="codigo">
+    </div>
+
+    <div class="mb-3">        
+      <label for="descricao">Descricao: </label>
+      <input type="text" class="form-control" id="descricao" required [(ngModel)]="produto.descricao" name="descricao">     
+    </div>
+
+    <div class="mb-3">
+      <label for="departamento">Departamento: </label>
+      <select id="departamento" class="form-select" required [(ngModel)]="produto.departamentoId" name="departamentoId">
+        <option value="">Selecione um Departamento</option>
+        <option *ngFor="let dep of departamentos" [value]="dep.id">{{ dep.descricao }}</option>
+      </select>
+    </div>
+
+    <div class="mb-3">        
+      <label for="preco">Preço: </label>
+      <input type="number" class="form-control" id="preco" required [(ngModel)]="produto.preco" name="preco">     
+    </div>
+
+    <input type="submit" value="Salvar Produto" class="btn btn-primary btn-block">
+  </form>
+</div>
+
+
+<div class="container p-3">
+    <h2>Lista de Produtos</h2>
+  
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Código</th>
+          <th>Descrição</th>
+          <th>Departamento</th>
+          <th>Preço</th>
+          <th>Status</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let produto of produtos">
+          <td>{{ produto.codigo }}</td>
+          <td>{{ produto.descricao }}</td>
+          <td>{{ getDepartamentoNome(produto.departamentoId) }}</td>
+          <td>{{ produto.preco | currency:'BRL':'symbol' }}</td>
+          <td>{{ produto.status ? 'Ativo' : 'Inativo' }}</td>
+          <td>
+            <button class="btn btn-warning me-2" (click)="onEditarProduto(produto)">Editar</button>
+            <button class="btn btn-danger" (click)="onDeleteProduto(produto)">Excluir</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
