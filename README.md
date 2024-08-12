@@ -1,31 +1,54 @@
-<<<<<<< HEAD
-# CadastroProdutoWeb
+# Projeto WEB - Gerenciamento de Produtos
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.1.4.
+    Este projeto é um  WEB desenvolvido em angular para gerenciamento de produtos. O Frontand permite a criação, leitura, atualização e exclusão de produtos em uma API.
 
-## Development server
+## Sumário
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- [Pré-requisitos](#pré-requisitos)
+- [Instalação](#instalação)
+- [Uso](#uso)
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Pré-requisitos
 
-## Build
+Antes de iniciar, você precisará ter as seguintes ferramentas instaladas em sua máquina:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- [Angular CLI](https://github.com/angular/angular-cli) version 18.1.4.
+- [Node.js](https://nodejs.org/pt/download/package-manager) version 20.16.0.
+- [Git](https://git-scm.com/)
+- Um editor de código, como [Visual Studio Code](https://code.visualstudio.com/) ou [Visual Studio](https://visualstudio.microsoft.com/)
 
-## Running unit tests
+## Instalação
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+1. **Clone o repositório**
 
-## Running end-to-end tests
+   Clone o repositório do projeto em sua máquina local:
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+   ```bash
+   git clone https://github.com/programdor1805/Projeto-FrontAnd-Entrevista.git
+   cd seu-repositorio
 
-## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
-=======
-# Projeto-FrontAnd-Entrevista
->>>>>>> e15b3ec5c7aa581733feb4ec62aba596d0ac129e
+2. **Instale pacotes Node**
+
+	 Navegue até o diretório do projeto e execute o comando abaixo para instalar os pacotes necessários:
+	```bash
+	npm install
+
+
+2. **Instale pacotes Node**
+
+	 Navegue até o diretório do projeto e execute o comando abaixo para instalar os pacotes necessários:
+	```bash
+	npm install
+
+
+## Uso
+
+1. **Execucao do Projeto**
+
+   ```bash
+	npm run start 
+
+2. **Efetuar Login**
+    O login, por padrão, não requer uma usuário e senha. Basta inserir um nome de usuário e senha  e clicar em "Entrar".
