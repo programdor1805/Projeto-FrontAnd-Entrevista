@@ -36,12 +36,6 @@ Antes de iniciar, você precisará ter as seguintes ferramentas instaladas em su
 	npm install
 
 
-2. **Instale pacotes Node**
-
-	 Navegue até o diretório do projeto e execute o comando abaixo para instalar os pacotes necessários:
-	```bash
-	npm install
-
 
 ## Uso
 
@@ -51,4 +45,5 @@ Antes de iniciar, você precisará ter as seguintes ferramentas instaladas em su
 	npm run start 
 
 2. **Efetuar Login**
+
     O login, por padrão, não requer uma usuário e senha. Basta inserir um nome de usuário e senha  e clicar em "Entrar".
