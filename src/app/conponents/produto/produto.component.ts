@@ -40,10 +40,7 @@ ngOnInit(): void {
     console.log(dadoDepartamento);
   })
 
-  
-  this.produtoService.getProdutos().subscribe((dadoAPI) =>{
-    this.produtos = dadoAPI; 
-  })  
+  this.buscaProduto();
 }
 
 getDepartamentoNome(departamentoId: number): string {
@@ -79,9 +76,9 @@ onBuscarProdutos():void{
 
         this.produtoService.addProduto(this.produto).subscribe({
           next: (response) => {
+            this.buscaProduto();
             form.resetForm();          
-            this.showAlert('Produto criado com sucesso.', 'success');     
-            this.produtos.push(response);
+            this.showAlert('Produto criado com sucesso.', 'success');            
           },
           error: (error) => {      
             this.showAlert('Erro ao criar produto: '  + error, 'danger'); 
@@ -126,5 +123,11 @@ onBuscarProdutos():void{
     this.formInvalid = false;
   }
   
+
+  buscaProduto() : void {
+    this.produtoService.getProdutos().subscribe((dadoAPI) =>{
+      this.produtos = dadoAPI; 
+    })  
+  }
 
 }
